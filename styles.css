@@ -2250,6 +2250,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .btn-signin:hover { border-color: var(--black); background: var(--bg-soft); color: var(--black); }
 
 /* 90% scroll popup */
+.pop90[hidden] { display: none; }
 .pop90 {
   position: fixed; inset: 0; z-index: 120;
   display: flex; align-items: center; justify-content: center;
