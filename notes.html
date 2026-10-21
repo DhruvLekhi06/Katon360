@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katon Notes | Katon 360</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=86">
+</head>
+<body>
+
+<div id="navSentinel"></div>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html#top">
+      <img class="brand-logo" src="assets/logo-main.svg" alt="Katon">
+      <span class="brand-divider"></span>
+      <span class="brand-sub">360</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Products <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="index.html#product"><i class="ph ph-play-circle"></i><span><strong>Product tour</strong><small>The real product, right on this page</small></span></a>
+          <a href="meetings.html"><i class="ph ph-video-camera"></i><span><strong>Katon Meet</strong><small>Online meetings that bring people closer</small></span></a>
+          <a href="calendar.html"><i class="ph ph-calendar-blank"></i><span><strong>Katon Calendar</strong><small>Make every meeting easier to plan</small></span></a>
+          <a href="chat.html"><i class="ph ph-chat-circle"></i><span><strong>Katon Chat</strong><small>Conversations that keep work moving</small></span></a>
+          <a href="drive.html"><i class="ph ph-folder-open"></i><span><strong>Katon Drive</strong><small>Files that are easier to organise and find</small></span></a>
+          <a href="tasks.html"><i class="ph ph-list-checks"></i><span><strong>Katon Tasks</strong><small>Turn decisions into action</small></span></a>
+          <a href="notes.html"><i class="ph ph-note-pencil"></i><span><strong>Katon Notes</strong><small>Capture the thinking behind the work</small></span></a>
+        </div>
+      </div>
+      <a class="nav-plain" href="index.html#pricing">Plans and pricing</a>
+      <a class="nav-plain" href="index.html#communication">Features</a>
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Solutions <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="meetings.html"><i class="ph ph-rocket-launch"></i><span><strong>For startups</strong><small>Ship fast without meeting sprawl</small></span></a>
+          <a href="calendar.html"><i class="ph ph-briefcase"></i><span><strong>For agencies</strong><small>Client work on one shared month</small></span></a>
+          <a href="chat.html"><i class="ph ph-globe-hemisphere-west"></i><span><strong>For remote teams</strong><small>Together across every timezone</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Resources <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="index.html#customers"><i class="ph ph-users-three"></i><span><strong>Customers</strong><small>Teams that switched</small></span></a>
+          <a href="index.html#faq"><i class="ph ph-question"></i><span><strong>FAQ</strong><small>Answers before you ask</small></span></a>
+          <a href="index.html#security"><i class="ph ph-shield-check"></i><span><strong>Security</strong><small>Built for business, designed around trust</small></span></a>
+        </div>
+      </div>
+      <a class="nav-plain" href="index.html#faq">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-primary nav-cta" data-open-modal>Try for free</button>
+      <button class="btn btn-signin" data-open-modal>Download Katon 360</button>
+      <button class="btn btn-signin" data-open-modal>Sign in</button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><i class="ph ph-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="hero-kicker">Collaboration Suite · Katon Notes</span>
+      <h1>Capture the thinking<br>behind the <span class="accent">work.</span></h1>
+      <p>Keep ideas, meeting notes, decisions and useful information organised so they are easier to revisit, share and use.</p>
+    </div>
+  </section>
+
+  <section class="suite" style="padding: 90px 0;">
+    <div class="container">
+      <div class="prod-feats" style="gap: 56px;">
+        <div class="reveal"><h4 style="font-size: 1.2rem;"><i class="ph ph-note-pencil" style="color: var(--primary); margin-right: 8px;"></i>Capture and organise knowledge</h4><ul><li>Quick notes and rich-text notes</li><li>Checklists, tags and labels</li><li>Shared and pinned notes</li><li>Attachments and search</li><li>Meeting notes</li><li>Personal and shared knowledge capture</li><li>Linked notes across workflows</li></ul></div>
+        <div class="reveal"><h4 style="font-size: 1.2rem;"><i class="ph ph-sparkle" style="color: var(--primary); margin-right: 8px;"></i>Make knowledge more useful</h4><ul><li>Note templates and workspace notebooks</li><li>Decision logs and note linking</li><li>Integration with Katon Drive, Meet and Chat</li><li>Note-to-task conversion</li><li>AI-powered note summaries</li><li>Automatic tagging and organisation</li><li>Decision extraction</li><li>Questions and answers across notes</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-inner reveal">
+      <h2>See Katon Notes inside Katon 360.</h2>
+      <p>One connected ecosystem for meetings, calendars, chat, files, tasks and notes.</p>
+      <div class="cta-btns">
+        <a class="btn btn-white btn-lg" href="index.html#product">Take the product tour</a>
+        <a class="btn btn-outline btn-lg" href="index.html#contact">Talk to Our Team</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html#top">
+        <img class="brand-mark" src="assets/logo.png" alt="">
+        Katon360
+      </a>
+      <p>Work smarter. Connect everything. Achieve more.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <a href="index.html#communication">Communication Suite</a>
+      <a href="index.html#collaboration">Collaboration Suite</a>
+      <a href="index.html#ai">AI and Productivity</a>
+      <a href="index.html#security">Security</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#customers">Customer Stories</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="index.html#top">Privacy Policy</a>
+      <a href="index.html#top">Terms of Service</a>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <span>© 2026 Katon360. All rights reserved.</span>
+  </div>
+</footer>
+
+<div class="toast-zone" id="toastZone"></div>
+
+<script src="app.js?v=41"></script>
+</body>
+</html>

@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katon360</title>
+<meta name="description" content="Katon360 is one workspace for your team calendar, meetings, and chat.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=86">
+</head>
+<body>
+
+<div id="navSentinel"></div>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="assets/logo-main.svg" alt="Katon">
+      <span class="brand-divider"></span>
+      <span class="brand-sub">360</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Products <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="#product"><i class="ph ph-play-circle"></i><span><strong>Product tour</strong><small>The real product, right on this page</small></span></a>
+          <a href="meetings.html"><i class="ph ph-video-camera"></i><span><strong>Katon Meet</strong><small>Online meetings that bring people closer</small></span></a>
+          <a href="calendar.html"><i class="ph ph-calendar-blank"></i><span><strong>Katon Calendar</strong><small>Make every meeting easier to plan</small></span></a>
+          <a href="chat.html"><i class="ph ph-chat-circle"></i><span><strong>Katon Chat</strong><small>Conversations that keep work moving</small></span></a>
+          <a href="drive.html"><i class="ph ph-folder-open"></i><span><strong>Katon Drive</strong><small>Files that are easier to organise and find</small></span></a>
+          <a href="tasks.html"><i class="ph ph-list-checks"></i><span><strong>Katon Tasks</strong><small>Turn decisions into action</small></span></a>
+          <a href="notes.html"><i class="ph ph-note-pencil"></i><span><strong>Katon Notes</strong><small>Capture the thinking behind the work</small></span></a>
+        </div>
+      </div>
+      <a class="nav-plain" href="#pricing">Plans and pricing</a>
+      <a class="nav-plain" href="#communication">Features</a>
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Solutions <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="meetings.html"><i class="ph ph-rocket-launch"></i><span><strong>For startups</strong><small>Ship fast without meeting sprawl</small></span></a>
+          <a href="calendar.html"><i class="ph ph-briefcase"></i><span><strong>For agencies</strong><small>Client work on one shared month</small></span></a>
+          <a href="chat.html"><i class="ph ph-globe-hemisphere-west"></i><span><strong>For remote teams</strong><small>Together across every timezone</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-drop-btn" type="button">Resources <i class="ph ph-caret-down"></i></button>
+        <div class="nav-drop">
+          <a href="#customers"><i class="ph ph-users-three"></i><span><strong>Customers</strong><small>Teams that switched</small></span></a>
+          <a href="#faq"><i class="ph ph-question"></i><span><strong>FAQ</strong><small>Answers before you ask</small></span></a>
+          <a href="#security"><i class="ph ph-shield-check"></i><span><strong>Security</strong><small>Built for business, designed around trust</small></span></a>
+        </div>
+      </div>
+      <a class="nav-plain" href="#faq">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-primary nav-cta" data-open-modal>Try for free</button>
+      <button class="btn btn-signin" data-open-modal>Download Katon 360</button>
+      <button class="btn btn-signin" data-open-modal>Sign in</button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><i class="ph ph-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Bring your people, conversations<br>and work together.</h1>
+        <p>Meet, communicate, share knowledge and move work forward with Katon 360, a connected digital workplace designed to make collaboration simpler, smarter and more secure.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary btn-caps btn-lg" data-open-modal>Start Free</button>
+          <a class="btn btn-dark btn-caps btn-lg" href="#contact">Talk to Our Team</a>
+        </div>
+        <a class="hero-link" href="#film"><i class="ph ph-play-circle"></i> Watch Katon 360 in action</a>
+        <ul class="hero-checks">
+          <li><i class="ph ph-check-circle"></i> Free 30-day evaluation</li>
+          <li><i class="ph ph-check-circle"></i> No card details required</li>
+          <li><i class="ph ph-check-circle"></i> Free support and onboarding</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="assets/hero-illo.png" alt="">
+      </div>
+    </div>
+
+    <div class="stage-band" id="film">
+      <div class="container">
+        <div class="stage-wrap">
+          <div class="app-frame"><div class="app" id="app">
+          <div class="app-chrome">
+            <div class="app-chrome-left">
+              <img class="brand-mark sm" src="assets/logo.png" alt="">
+              <span class="app-ws">Brightside Studio</span>
+            </div>
+            <div class="app-tabs" role="tablist">
+              <button class="app-tab active" data-view="calendar" role="tab"><i class="ph ph-calendar-blank"></i> Calendar</button>
+              <button class="app-tab" data-view="meetings" role="tab"><i class="ph ph-video-camera"></i> Meetings</button>
+              <button class="app-tab" data-view="chat" role="tab"><i class="ph ph-chat-circle"></i> Chat</button>
+            </div>
+            <div class="app-people">
+              <span class="avatar av-1">PR</span>
+              <span class="avatar av-2">DO</span>
+              <span class="avatar av-3">AC</span>
+            </div>
+          </div>
+
+          <div class="app-body">
+
+            <div class="app-view active" data-view="calendar">
+              <div class="cal-head">
+                <div class="cal-title">
+                  <button class="icon-btn" id="calPrev" aria-label="Previous month"><i class="ph ph-caret-left"></i></button>
+                  <h3 id="calMonth">Month</h3>
+                  <button class="icon-btn" id="calNext" aria-label="Next month"><i class="ph ph-caret-right"></i></button>
+                </div>
+                <div class="cal-actions">
+                  <button class="btn btn-ghost btn-sm" id="calToday">Today</button>
+                  <button class="btn btn-primary btn-sm" id="calNew"><i class="ph ph-plus"></i> New meeting</button>
+                </div>
+              </div>
+              <div class="cal-wrap">
+                <div class="cal-grid-area">
+                  <div class="cal-weekdays" id="calWeekdays"></div>
+                  <div class="cal-grid" id="calGrid"></div>
+                </div>
+                <aside class="cal-panel">
+                  <h4 id="panelDate">Selected day</h4>
+                  <div id="panelEvents" class="panel-events"></div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="app-view" data-view="meetings">
+              <div class="meet-wrap">
+                <div class="meet-list-col">
+                  <h3>Upcoming</h3>
+                  <div id="meetList" class="meet-list"></div>
+                </div>
+                <div class="meet-form-col">
+                  <h3>Schedule a meeting</h3>
+                  <form id="meetForm" class="meet-form">
+                    <label>Title
+                      <input type="text" name="title" placeholder="Sprint review" required>
+                    </label>
+                    <div class="form-row">
+                      <label>Date
+                        <input type="date" name="date" required>
+                      </label>
+                      <label>Time
+                        <input type="time" name="time" value="10:00" required>
+                      </label>
+                    </div>
+                    <label>Attendees
+                      <input type="text" name="attendees" placeholder="Priya, Daniel, Ana">
+                    </label>
+                    <button class="btn btn-primary" type="submit"><i class="ph ph-calendar-plus"></i> Add to calendar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-view" data-view="chat">
+              <div class="chat-wrap">
+                <aside class="chat-channels">
+                  <h4>Channels</h4>
+                  <button class="channel active" data-channel="general"># general</button>
+                  <button class="channel" data-channel="design"># design</button>
+                  <button class="channel" data-channel="launch"># launch</button>
+                </aside>
+                <div class="chat-main">
+                  <div class="chat-feed" id="chatFeed"></div>
+                  <div class="chat-typing" id="chatTyping" hidden>
+                    <span class="avatar av-2 sm" id="typingAvatar">DO</span>
+                    <span class="typing-dots"><i></i><i></i><i></i></span>
+                  </div>
+                  <form class="chat-composer" id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Message # general" autocomplete="off">
+                    <button class="btn btn-primary btn-sm" type="submit" aria-label="Send"><i class="ph ph-paper-plane-right"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="trusted" id="customers-top">
+    <div class="container">
+      <h2 class="reveal">Trusted by organisations. Built for what comes next.</h2>
+      <p class="int-sub reveal">Katon 360 brings together digital experiences that help organisations connect people, simplify communication and make everyday work more productive.</p>
+      <div class="stats-row reveal" style="margin-top: 36px;">
+        <div class="stat"><span class="stat-num" data-count="200" data-suffix="+">0</span><span class="stat-label">corporates live</span></div>
+        <div class="stat"><span class="stat-num" data-count="400000" data-suffix="+">0</span><span class="stat-label">users onboarded</span></div>
+        <div class="stat"><span class="stat-num" data-count="25" data-suffix="+">0</span><span class="stat-label">countries and markets served</span></div>
+      </div>
+    </div>
+    <div class="logos" style="padding: 52px 0 0;">
+      <p class="logos-title reveal">Trusted by leading organisations across the UAE and beyond</p>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+    </div>
+  </section>
+  <section class="challenges">
+    <div class="container">
+      <div class="chal-head reveal">
+        <h2>Your work moves across teams.<br><span class="ghost">Your tools should move with it.</span></h2>
+        <p class="chal-head-right">Every day, teams meet, exchange ideas, share files, make decisions and coordinate next steps. But when these activities happen across disconnected tools, work becomes harder to manage.</p>
+      </div>
+      <div class="day-slider reveal">
+        <div class="day-track" id="dayTrack">
+        <article class="day-card">
+          <img src="assets/pain-morning.jpg" alt="A morning stand-up breaking up" loading="lazy">
+          <div class="dc-body">
+            <h3>Meetings generate ideas, but follow-ups get missed.</h3>
+            <p>Important decisions and action items can be difficult to track after a conversation ends.</p>
+            <a class="dc-more" href="meetings.html"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <img src="assets/pain-afternoon.jpg" alt="Messages piling up across screens" loading="lazy">
+          <div class="dc-body">
+            <h3>Conversations get buried in endless messages.</h3>
+            <p>Finding the right update, file or decision can take longer than it should.</p>
+            <a class="dc-more" href="chat.html"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <img src="assets/pain-schedule.jpg" alt="Two colleagues coordinating calendars" loading="lazy">
+          <div class="dc-body">
+            <h3>Schedules become harder to coordinate.</h3>
+            <p>Finding suitable meeting times, managing calendars and keeping everyone informed can consume valuable time.</p>
+            <a class="dc-more" href="calendar.html"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <img src="assets/pain-evening.jpg" alt="Searching for information late in the day" loading="lazy">
+          <div class="dc-body">
+            <h3>Files and knowledge become scattered.</h3>
+            <p>Teams need an easier way to organise shared resources and find the information they need.</p>
+            <a class="dc-more" href="drive.html"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <img src="assets/multilingual.jpg" alt="A multilingual team collaborating" loading="lazy">
+          <div class="dc-body">
+            <h3>Language differences create barriers.</h3>
+            <p>Multilingual teams need collaboration experiences that reflect how people actually communicate at work.</p>
+            <a class="dc-more" href="#multilingual"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <img src="assets/pain-opportunity.jpg" alt="A team working in sync around one laptop" loading="lazy">
+          <div class="dc-body">
+            <h3>The opportunity.</h3>
+            <p>Bring communication, collaboration and workplace productivity closer together, so people can focus less on coordinating work and more on getting it done.</p>
+            <a class="dc-more" href="#ecosystem"><span><i class="ph ph-caret-right"></i></span>Learn more</a>
+          </div>
+        </article>
+        </div>
+      </div>
+      <div class="day-nav reveal">
+        <button class="day-arrow" id="dayPrev" type="button" aria-label="Previous"><i class="ph ph-arrow-left"></i></button>
+        <button class="day-arrow" id="dayNext" type="button" aria-label="Next"><i class="ph ph-arrow-right"></i></button>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="suite" id="communication" style="background: var(--bg-soft); padding: 96px 0;">
+    <span id="collaboration"></span>
+    <div class="container suite-head suite-head-center">
+      <h2 class="reveal">Meet, plan, chat, share, track, capture.<br><span class="ghost">All in one flow of work.</span></h2>
+    </div>
+    <div class="container dept-wrap">
+      <div class="dept-tabs dept-tabs-wide reveal">
+        <button class="suite-tab active" type="button"><i class="ph ph-video-camera"></i> Katon Meet</button>
+        <button class="suite-tab" type="button"><i class="ph ph-calendar-blank"></i> Katon Calendar</button>
+        <button class="suite-tab" type="button"><i class="ph ph-chat-circle"></i> Katon Chat</button>
+        <button class="suite-tab" type="button"><i class="ph ph-folder-open"></i> Katon Drive</button>
+        <button class="suite-tab" type="button"><i class="ph ph-list-checks"></i> Katon Tasks</button>
+        <button class="suite-tab" type="button"><i class="ph ph-note-pencil"></i> Katon Notes</button>
+      </div>
+
+      <div class="prod-panel dept-row active">
+        <div class="dept-copy">
+          <h3>Online meetings that bring people closer.</h3>
+          <p>Connect with colleagues, customers and partners through online meeting software designed for productive conversations. Share your screen, present ideas and collaborate in real time.</p>
+          <ul class="show-list">
+            <li>HD video for one-to-one and group calls</li>
+            <li>Screen sharing and real-time collaboration</li>
+            <li>AI-generated summaries and action items</li>
+            <li>Recording, live captions and noise suppression</li>
+            <li>Breakout rooms, polls, Q&amp;A and reactions</li>
+          </ul>
+        </div>
+        <div class="dept-visual tint sv-cal">
+          <div class="meet-mock">
+            <div class="mm-grid">
+              <div class="mm-tile"><span class="avatar av-1">PR</span><em>Priya</em></div>
+              <div class="mm-tile"><span class="avatar av-2">DO</span><em>Daniel</em></div>
+              <div class="mm-tile"><span class="avatar av-3">AC</span><em>Ana</em></div>
+              <div class="mm-tile mm-you"><span class="avatar av-you">You</span><em>You</em></div>
+            </div>
+            <div class="mm-cap"><i class="ph ph-closed-captioning"></i> "Let's lock Thursday for the launch review."</div>
+            <div class="mm-bar"><span><i class="ph ph-microphone"></i></span><span><i class="ph ph-video-camera"></i></span><span><i class="ph ph-monitor-arrow-up"></i></span><span class="mm-end"><i class="ph ph-phone-x"></i></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-panel dept-row">
+        <div class="dept-copy">
+          <h3>Make every meeting easier to plan.</h3>
+          <p>Bring your schedule, events and meetings into one organised calendar experience. Coordinate with your team, manage invitations and keep commitments in view.</p>
+          <ul class="show-list">
+            <li>Personal and team calendars with smart scheduling</li>
+            <li>Day, week and month views with time zones</li>
+            <li>Suggested times and conflict resolution</li>
+            <li>Focus time and Do Not Disturb</li>
+            <li>Room booking plus Katon Meet integration</li>
+          </ul>
+        </div>
+        <div class="dept-visual tint sv-cal">
+          <div class="cal-mock">
+            <div class="cm-head"><strong>This week</strong><span class="cm-badge"><i class="ph ph-users-three"></i> Team view</span></div>
+            <div class="cm-grid">
+              <div class="cm-col"><span class="cm-day">Mon</span><i class="cm-evt ce-a" style="--d:0.2s">Standup</i><i class="cm-evt ce-c" style="--d:2.6s">Focus</i></div>
+              <div class="cm-col"><span class="cm-day">Tue</span><i class="cm-evt ce-b" style="--d:0.8s">Design critique</i></div>
+              <div class="cm-col"><span class="cm-day">Wed</span><i class="cm-evt ce-c" style="--d:1.4s">Focus block</i><i class="cm-evt ce-a" style="--d:3.2s">1:1 Priya</i></div>
+              <div class="cm-col"><span class="cm-day">Thu</span><i class="cm-evt ce-d" style="--d:2s">Launch review</i></div>
+              <div class="cm-col"><span class="cm-day">Fri</span><i class="cm-evt ce-b" style="--d:3.8s">Retro</i></div>
+            </div>
+            <div class="cm-suggest"><i class="ph ph-sparkle"></i> Suggested: Thursday 4:00 PM works for everyone<span class="cm-accept">Accept</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-panel dept-row">
+        <div class="dept-copy">
+          <h3>Conversations that keep work moving.</h3>
+          <p>Bring people together through direct messages, team channels and focused discussions. Keep context close to the conversation and find important messages fast.</p>
+          <ul class="show-list">
+            <li>Direct messages, channels and team spaces</li>
+            <li>Threads, reactions, mentions and replies</li>
+            <li>AI-powered reply suggestions and summaries</li>
+            <li>Automatic translation across languages</li>
+            <li>Intelligent search and priority alerts</li>
+          </ul>
+        </div>
+        <div class="dept-visual tint sv-chat">
+          <div class="chat-mock">
+            <div class="chm-head"><strong># launch</strong><span>12 members</span></div>
+            <div class="chm-msg" style="--d:0.3s"><span class="avatar av-1 sm">PR</span><div><b>Priya</b><p>Staging build is green. Final run-through tomorrow?</p></div></div>
+            <div class="chm-msg" style="--d:1.6s"><span class="avatar av-2 sm">DO</span><div><b>Daniel</b><p>Works for me. 4 PM?</p></div></div>
+            <div class="chm-typing" style="--d:2.9s"><span class="avatar av-3 sm">AC</span><span class="typing-dots"><i></i><i></i><i></i></span></div>
+            <div class="chm-msg" style="--d:4.4s"><span class="avatar av-3 sm">AC</span><div><b>Ana</b><p>Booked it from this thread. One click.</p></div></div>
+            <div class="chm-confirm" style="--d:5.6s"><i class="ph ph-calendar-check"></i> Launch run-through · Thursday 4:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-panel dept-row">
+        <div class="dept-copy">
+          <h3>All your team's files. Easier to organise and find.</h3>
+          <p>Bring documents, shared resources and workplace content into an organised digital workspace. Manage access and keep information available to the people who need it.</p>
+          <ul class="show-list">
+            <li>Personal and shared folders with permissions</li>
+            <li>Preview, download and version history</li>
+            <li>Secure internal and external sharing</li>
+            <li>AI-powered file search and summarisation</li>
+            <li>Automatic tagging and classification</li>
+          </ul>
+        </div>
+        <div class="dept-visual">
+          <div class="drive-mock">
+            <div class="dm-head"><strong><i class="ph ph-folder-open"></i> Launch assets</strong><span class="dm-share"><i class="ph ph-users-three"></i> Shared</span></div>
+            <div class="dm-row" style="--d:0.2s"><i class="ph ph-file-doc dm-ic ic-blue"></i><div><b>Launch brief v4</b><span>Edited 2h ago · Priya</span></div><i class="ph ph-check-circle dm-ok"></i></div>
+            <div class="dm-row" style="--d:0.9s"><i class="ph ph-file-xls dm-ic ic-green"></i><div><b>Q4 rollout plan</b><span>Edited yesterday · Daniel</span></div><i class="ph ph-check-circle dm-ok"></i></div>
+            <div class="dm-row dm-upload" style="--d:1.6s"><i class="ph ph-file-video dm-ic ic-violet"></i><div><b>Standup recording</b><span class="dm-bar"><i></i></span></div><em class="dm-pct">Syncing</em></div>
+            <div class="dm-search" style="--d:3.4s"><i class="ph ph-sparkle"></i> "Where is the final launch date?" <b>Thursday, in Launch brief v4</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-panel dept-row">
+        <div class="dept-copy">
+          <h3>Turn decisions into action.</h3>
+          <p>Give teams a clearer way to organise responsibilities, track progress and keep important work moving. Bring tasks, deadlines and ownership into focus.</p>
+          <ul class="show-list">
+            <li>Personal and team tasks with owners and dates</li>
+            <li>List, Kanban and calendar views</li>
+            <li>AI action-item extraction from meetings</li>
+            <li>Suggested owners, deadlines and priorities</li>
+            <li>Overdue risk alerts and task summaries</li>
+          </ul>
+        </div>
+        <div class="dept-visual">
+          <div class="task-mock">
+            <div class="tk-col"><span class="tk-lab">To do</span>
+              <div class="tk-card"><b>Update pricing page</b><span class="avatar av-2 sm">DO</span></div>
+              <div class="tk-card"><b>Draft launch email</b><span class="avatar av-1 sm">PR</span></div>
+            </div>
+            <div class="tk-col"><span class="tk-lab">In progress</span>
+              <div class="tk-card tk-leave"><b>Final QA pass</b><span class="avatar av-3 sm">AC</span></div>
+              <div class="tk-card"><b>Press kit review</b><span class="avatar av-1 sm">PR</span></div>
+            </div>
+            <div class="tk-col"><span class="tk-lab done">Done</span>
+              <div class="tk-card tk-arrive"><b><i class="ph ph-check-circle"></i> Final QA pass</b><span class="avatar av-3 sm">AC</span></div>
+              <div class="tk-card"><b><i class="ph ph-check-circle"></i> Staging deploy</b><span class="avatar av-2 sm">DO</span></div>
+            </div>
+            <div class="tk-ai" style="--d:4.2s"><i class="ph ph-sparkle"></i> 3 action items extracted from Weekly standup</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-panel dept-row">
+        <div class="dept-copy">
+          <h3>Capture the thinking behind the work.</h3>
+          <p>Keep ideas, meeting notes, decisions and useful information organised so they are easier to revisit, share and use.</p>
+          <ul class="show-list">
+            <li>Quick notes, rich text and checklists</li>
+            <li>Shared, pinned and meeting notes</li>
+            <li>Note-to-task conversion</li>
+            <li>AI-powered note summaries</li>
+            <li>Questions and answers across notes</li>
+          </ul>
+        </div>
+        <div class="dept-visual">
+          <div class="note-mock">
+            <div class="nm-head"><strong>Launch retro notes</strong><span class="nm-people"><span class="avatar av-1 sm">PR</span><span class="avatar av-3 sm">AC</span></span></div>
+            <div class="nm-body">
+              <span class="nm-line l1"></span>
+              <span class="nm-line l2"></span>
+              <span class="nm-line l3"></span>
+              <span class="nm-line l4 typing"></span>
+            </div>
+            <div class="nm-check" style="--d:3s"><i class="ph ph-check-square"></i> Convert "ship FAQ update" to a task</div>
+            <div class="nm-ai" style="--d:4.6s"><i class="ph ph-sparkle"></i> Summary ready: 4 decisions, 2 owners assigned</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ecosystem" id="ecosystem" style="padding: 96px 0;">
+    <div class="container">
+      <h2 class="reveal">One ecosystem. More ways to move work forward.</h2>
+      <p class="int-sub reveal">Katon 360 brings together the digital experiences people use to meet, communicate, coordinate, share knowledge and get work done.</p>
+      <div class="rp-grid reveal">
+        <div class="rp-steps">
+          <button class="rp-step active" type="button">
+            <span class="rp-dot"><i class="ph ph-check"></i></span>
+            <span class="rp-body">
+              <em>Meet · Chat</em>
+              <strong>Connect</strong>
+              <span>Video meetings and team conversations.</span>
+            </span>
+          </button>
+          <button class="rp-step" type="button">
+            <span class="rp-dot"><i class="ph ph-check"></i></span>
+            <span class="rp-body">
+              <em>Calendar</em>
+              <strong>Coordinate</strong>
+              <span>Meetings, events and schedules organised.</span>
+            </span>
+          </button>
+          <button class="rp-step" type="button">
+            <span class="rp-dot"><i class="ph ph-check"></i></span>
+            <span class="rp-body">
+              <em>Drive · Tasks · Notes</em>
+              <strong>Collaborate</strong>
+              <span>Shared resources, tasks and knowledge.</span>
+            </span>
+          </button>
+          <button class="rp-step" type="button">
+            <span class="rp-dot"><i class="ph ph-check"></i></span>
+            <span class="rp-body">
+              <em>Katon AI</em>
+              <strong>Work intelligently</strong>
+              <span>AI for discovery, productivity and decisions.</span>
+            </span>
+          </button>
+        </div>
+        <div class="rp-visual">
+          <div class="rp-card active">
+            <div class="rp-mock">
+              <div class="rp-mock-head"><strong>Design critique</strong><span class="rp-chip"><i class="ph ph-video-camera"></i> Live · Katon Meet</span></div>
+              <div class="rp-line"><span class="avatar av-1 sm">PR</span><div><b>Priya</b><span>Sharing the new pricing flow now.</span></div></div>
+              <div class="rp-line"><span class="avatar av-2 sm">DO</span><div><b>Daniel</b><span>Looks great. Booking the follow-up from this thread.</span></div></div>
+              <div class="rp-line"><span class="avatar av-3 sm">AC</span><div><b>Ana</b><span>Captions on, recording saved for the team.</span></div></div>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rp-mock">
+              <div class="rp-mock-head"><strong>Your week</strong><span class="rp-chip ok"><i class="ph ph-calendar-check"></i> No conflicts</span></div>
+              <div class="rp-slot"><em>Mon</em><div class="rp-block"><b>Weekly stand-up</b><span>9:30 AM · whole team</span></div></div>
+              <div class="rp-slot"><em>Wed</em><div class="rp-block focus"><b>Focus block</b><span>2:00 PM · Do Not Disturb</span></div></div>
+              <div class="rp-slot"><em>Thu</em><div class="rp-block"><b>Launch review</b><span>4:00 PM · suggested by Katon</span></div></div>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rp-mock">
+              <div class="rp-mock-head"><strong>Launch workspace</strong><span class="rp-chip"><i class="ph ph-users-three"></i> Shared</span></div>
+              <div class="rp-task tl"><i class="ph ph-file-doc"></i><div><b>Launch brief v4</b><span>Drive · edited 2h ago</span></div><span class="avatar av-1 sm">PR</span></div>
+              <div class="rp-task tl"><i class="ph ph-list-checks"></i><div><b>Final QA pass</b><span>Tasks · in progress</span></div><span class="avatar av-3 sm">AC</span></div>
+              <div class="rp-task tl"><i class="ph ph-note-pencil"></i><div><b>Retro notes</b><span>Notes · linked to tasks</span></div><span class="avatar av-2 sm">DO</span></div>
+            </div>
+          </div>
+          <div class="rp-card">
+            <div class="rp-mock">
+              <div class="rp-mock-head"><strong>Katon AI</strong><span class="rp-chip"><i class="ph ph-sparkle"></i> Recap ready</span></div>
+              <p class="rp-sum">Four decisions logged. Notes linked to tasks. Recording filed in Drive.</p>
+              <div class="rp-tomorrow">
+                <em>Tomorrow</em>
+                <div><i class="ph ph-video-camera"></i> Launch run-through · 4:00 PM</div>
+                <div><i class="ph ph-list-checks"></i> Two tasks due, both owned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ai-core" id="ai" style="padding: 96px 0;">
+    <div class="container">
+      <h2 class="reveal">Intelligence that works across your workplace.</h2>
+      <p class="int-sub reveal">Katon 360 brings AI into communication, discovery and productivity, so people spend less time searching, summarising and coordinating.</p>
+      <div class="ai-demo reveal" id="aiDemo">
+        <img class="ai-bot" src="assets/katon-bot.png" alt="" aria-hidden="true">
+        <div class="ai-ask"><i class="ph ph-magnifying-glass"></i><span class="ai-ask-text" id="aiAskText"></span></div>
+        <div class="rp-mock ai-ansbox" id="aiAns">
+          <div class="rp-mock-head"><strong>Katon AI</strong><span class="rp-chip"><i class="ph ph-sparkle"></i> Answer</span></div>
+          <p class="rp-sum" id="aiAnsText"></p>
+          <div class="ai-src" id="aiSrc"></div>
+        </div>
+      </div>
+      <div class="ai-caps reveal">
+        <div class="ai-item"><span class="chal-ico ci-blue"><i class="ph ph-sparkle"></i></span><div><b>Intelligent assistance</b><span>Context-aware support across the workplace.</span></div></div>
+        <div class="ai-item"><span class="chal-ico ci-violet"><i class="ph ph-file-magnifying-glass"></i></span><div><b>Content intelligence</b><span>Summarise, extract, search and organise.</span></div></div>
+        <div class="ai-item"><span class="chal-ico ci-teal"><i class="ph ph-video-camera"></i></span><div><b>Meeting intelligence</b><span>Summaries, action items and highlights.</span></div></div>
+        <div class="ai-item"><span class="chal-ico ci-amber"><i class="ph ph-flow-arrow"></i></span><div><b>Workflow productivity</b><span>Tasks, reminders and follow-ups connected.</span></div></div>
+        <div class="ai-item"><span class="chal-ico ci-rose"><i class="ph ph-magnifying-glass"></i></span><div><b>Intelligent discovery</b><span>Find answers across conversations and files.</span></div></div>
+        <div class="ai-item"><span class="chal-ico ci-green"><i class="ph ph-shield-check"></i></span><div><b>Privacy and trust</b><span>Permissions and governance stay central.</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="split" id="multilingual">
+    <div class="container split-inner">
+      <div class="split-copy reveal">
+        <h2>Every language belongs.</h2>
+        <p>Teams should not have to speak the same language to work towards the same goal. Katon 360 is designed around a multilingual collaboration vision for African and global teams, helping people communicate across language barriers and participate more fully.</p>
+        <p style="color: var(--navy); font-weight: 600;">A workplace built for the languages people actually use.</p>
+        <div class="ml-ctas">
+          <a class="btn btn-primary" href="#pricing">Buy now</a>
+          <button class="btn btn-outline-navy" type="button" data-open-modal>Try for free</button>
+        </div>
+      </div>
+      <div class="split-visual reveal">
+        <div class="ml-demo">
+          <div class="ml-head"><strong># launch-team</strong><span class="rp-chip"><i class="ph ph-translate"></i> Auto-translate on</span></div>
+          <div class="ml-msg">
+            <span class="avatar av-1 sm">AK</span>
+            <div>
+              <b>Amara <em>French</em></b>
+              <p>Le brief de lancement est pr&ecirc;t.</p>
+              <div class="ml-trans"><i class="ph ph-arrows-left-right"></i> The launch brief is ready.</div>
+            </div>
+          </div>
+          <div class="ml-msg">
+            <span class="avatar av-2 sm">OH</span>
+            <div>
+              <b>Omar <em>Arabic</em></b>
+              <p dir="rtl">&#1587;&#1571;&#1606;&#1590;&#1605; &#1573;&#1604;&#1609; &#1575;&#1604;&#1575;&#1580;&#1578;&#1605;&#1575;&#1593; &#1575;&#1604;&#1587;&#1575;&#1593;&#1577; &#1575;&#1604;&#1585;&#1575;&#1576;&#1593;&#1577;.</p>
+              <div class="ml-trans"><i class="ph ph-arrows-left-right"></i> I will join the meeting at 4:00 PM.</div>
+            </div>
+          </div>
+          <div class="ml-msg">
+            <span class="avatar av-3 sm">ZW</span>
+            <div>
+              <b>Zuri <em>Swahili</em></b>
+              <p>Nimeshiriki faili kwenye Drive.</p>
+              <div class="ml-trans"><i class="ph ph-arrows-left-right"></i> I shared the file on Drive.</div>
+            </div>
+          </div>
+          <div class="ml-langs"><span>English</span><span>&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</span><span>Fran&ccedil;ais</span><span>Kiswahili</span><span>+ more</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="outcomes" style="padding: 72px 0;">
+    <div class="container">
+      <h2 class="reveal">Less friction. Better focus. Stronger execution.</h2>
+      <div class="out-flow reveal">
+        <div class="of-col">
+          <div class="of-item"><b><span class="chal-ico ci-blue"><i class="ph ph-clock-countdown"></i></span>Give time back to teams</b><span>Less coordination busywork every day.</span></div>
+          <div class="of-item"><b><span class="chal-ico ci-green"><i class="ph ph-list-checks"></i></span>Turn decisions into action</b><span>Owners, deadlines and next steps in view.</span></div>
+          <div class="of-item"><b><span class="chal-ico ci-violet"><i class="ph ph-book-open"></i></span>Make knowledge accessible</b><span>Organise and find information fast.</span></div>
+        </div>
+        <div class="of-center" aria-hidden="true">
+          <div class="of-lane"><div class="of-track"><div class="of-set"><span><i class="ph ph-trend-up"></i> Sales</span><span><i class="ph ph-megaphone"></i> Marketing</span><span><i class="ph ph-user"></i> HR</span><span><i class="ph ph-headset"></i> Support</span></div><div class="of-set"><span><i class="ph ph-trend-up"></i> Sales</span><span><i class="ph ph-megaphone"></i> Marketing</span><span><i class="ph ph-user"></i> HR</span><span><i class="ph ph-headset"></i> Support</span></div></div></div>
+          <div class="of-lane rev"><div class="of-track"><div class="of-set"><span><i class="ph ph-wrench"></i> Engineering</span><span><i class="ph ph-palette"></i> Design</span><span><i class="ph ph-package"></i> Product</span><span><i class="ph ph-database"></i> Data</span></div><div class="of-set"><span><i class="ph ph-wrench"></i> Engineering</span><span><i class="ph ph-palette"></i> Design</span><span><i class="ph ph-package"></i> Product</span><span><i class="ph ph-database"></i> Data</span></div></div></div>
+          <div class="of-lane"><div class="of-track"><div class="of-set"><span><i class="ph ph-coins"></i> Finance</span><span><i class="ph ph-gear"></i> Operations</span><span><i class="ph ph-medal"></i> Leadership</span><span><i class="ph ph-scales"></i> Legal</span></div><div class="of-set"><span><i class="ph ph-coins"></i> Finance</span><span><i class="ph ph-gear"></i> Operations</span><span><i class="ph ph-medal"></i> Leadership</span><span><i class="ph ph-scales"></i> Legal</span></div></div></div>
+        </div>
+        <div class="of-col">
+          <div class="of-item"><b><span class="chal-ico ci-teal"><i class="ph ph-globe-hemisphere-west"></i></span>Connect more people</b><span>Across teams, regions and languages.</span></div>
+          <div class="of-item"><b><span class="chal-ico ci-amber"><i class="ph ph-users-three"></i></span>Improve team coordination</b><span>One coherent experience for shared work.</span></div>
+          <div class="of-item"><b><span class="chal-ico ci-rose"><i class="ph ph-chart-line-up"></i></span>Support informed decisions</b><span>Useful information, easier to understand.</span></div>
+        </div>
+      </div>
+      <p class="int-sub reveal" style="margin-top: 28px;">The goal is simple: help people connect, collaborate and achieve more with less friction.</p>
+    </div>
+  </section>
+  <section class="quotes" id="customers">
+    <div class="container">
+      <h2 class="reveal">Better ways of working, told by the people who use them.</h2>
+      <div class="t-wall reveal">
+        <div class="t-col" style="--dur: 36s;"><div class="t-col-track"><figure class="quote-card card"><blockquote>"Since introducing Katon Chat, keeping everyone aligned has become much easier. Our team can share updates and follow conversations without switching channels."</blockquote><figcaption><span class="avatar av-1">KH</span><div><strong>Kareem Hassan</strong><span>Head of Operations, Noon · UAE</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"Katon Tasks gives teams a clearer way to organise responsibilities and monitor deadlines. Visible ownership keeps projects moving."</blockquote><figcaption><span class="avatar av-2">SL</span><div><strong>Sophie Laurent</strong><span>Programme Manager, Capgemini · France</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">200+</span><blockquote>corporates live on the Katon ecosystem, connecting teams across markets</blockquote><figcaption><div><strong>Katon 360</strong><span>Corporates live</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"Since introducing Katon Chat, keeping everyone aligned has become much easier. Our team can share updates and follow conversations without switching channels."</blockquote><figcaption><span class="avatar av-1">KH</span><div><strong>Kareem Hassan</strong><span>Head of Operations, Noon · UAE</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"Katon Tasks gives teams a clearer way to organise responsibilities and monitor deadlines. Visible ownership keeps projects moving."</blockquote><figcaption><span class="avatar av-2">SL</span><div><strong>Sophie Laurent</strong><span>Programme Manager, Capgemini · France</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">200+</span><blockquote>corporates live on the Katon ecosystem, connecting teams across markets</blockquote><figcaption><div><strong>Katon 360</strong><span>Corporates live</span></div></figcaption></figure></div></div>
+        <div class="t-col rev" style="--dur: 44s;"><div class="t-col-track"><figure class="quote-card card"><blockquote>"Katon Meet has made it easier for our distributed teams to connect. Screen sharing helps us work through ideas together across locations."</blockquote><figcaption><span class="avatar av-3">AM</span><div><strong>Ananya Mehta</strong><span>Project Director, Standard Chartered Bank · India</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"A connected approach to files, shared information and team collaboration makes it easier to organise work. Katon 360 reduces fragmentation and brings clarity."</blockquote><figcaption><span class="avatar av-1">KM</span><div><strong>Kwame Mensah</strong><span>Digital Transformation Lead, Orange Business · Ghana</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">400k+</span><blockquote>users onboarded across the wider Katon ecosystem</blockquote><figcaption><div><strong>Katon 360</strong><span>Users onboarded</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"Katon Meet has made it easier for our distributed teams to connect. Screen sharing helps us work through ideas together across locations."</blockquote><figcaption><span class="avatar av-3">AM</span><div><strong>Ananya Mehta</strong><span>Project Director, Standard Chartered Bank · India</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"A connected approach to files, shared information and team collaboration makes it easier to organise work. Katon 360 reduces fragmentation and brings clarity."</blockquote><figcaption><span class="avatar av-1">KM</span><div><strong>Kwame Mensah</strong><span>Digital Transformation Lead, Orange Business · Ghana</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">400k+</span><blockquote>users onboarded across the wider Katon ecosystem</blockquote><figcaption><div><strong>Katon 360</strong><span>Users onboarded</span></div></figcaption></figure></div></div>
+        <div class="t-col" style="--dur: 30s;"><div class="t-col-track"><figure class="quote-card card"><blockquote>"The Katon Communication Suite gives us a more consistent way to communicate and collaborate across departments throughout the working day."</blockquote><figcaption><span class="avatar av-2">OB</span><div><strong>Oliver Bennett</strong><span>COO, Delivery Hero · United Kingdom</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">360°</span><blockquote>Work smarter. Connect everything. Achieve more.</blockquote><figcaption><div><strong>Katon 360</strong><span>One connected ecosystem</span></div></figcaption></figure><figure class="quote-card card"><blockquote>"The Katon Communication Suite gives us a more consistent way to communicate and collaborate across departments throughout the working day."</blockquote><figcaption><span class="avatar av-2">OB</span><div><strong>Oliver Bennett</strong><span>COO, Delivery Hero · United Kingdom</span></div></figcaption></figure><figure class="quote-card quote-stat"><span class="quote-stat-num">360°</span><blockquote>Work smarter. Connect everything. Achieve more.</blockquote><figcaption><div><strong>Katon 360</strong><span>One connected ecosystem</span></div></figcaption></figure></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="security" id="security" style="padding: 24px 0 72px;">
+    <div class="container">
+      <div class="sec-dark reveal" id="secTorch">
+        <div class="sec-copy">
+          <h2>Built for business.<br>Designed around trust.</h2>
+          <p>Workplace collaboration requires more than convenient tools. Organisations need confidence in how information is accessed, shared and protected.</p>
+          <a class="btn btn-dark" href="#contact">Discuss Your Requirements</a>
+        </div>
+        <div class="sec-points">
+          <div class="sec-pt"><span class="chal-ico ci-blue"><i class="ph ph-lock-key"></i></span><div><strong>Secure collaboration</strong><span>Meeting security, host controls and access permissions.</span></div></div>
+          <div class="sec-pt"><span class="chal-ico ci-teal"><i class="ph ph-shield-check"></i></span><div><strong>Privacy by design</strong><span>Responsible data handling across the experience.</span></div></div>
+          <div class="sec-pt"><span class="chal-ico ci-violet"><i class="ph ph-users-three"></i></span><div><strong>Controlled access</strong><span>Sharing designed around organisational requirements.</span></div></div>
+          <div class="sec-pt"><span class="chal-ico ci-amber"><i class="ph ph-buildings"></i></span><div><strong>Enterprise governance</strong><span>Administration, auditability and governance support.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="reveal">Find the right plan for your team.</h2>
+      <p class="int-sub reveal" style="margin-bottom: 44px;">From a small team getting started to a large organisation with complex collaboration requirements.</p>
+      <div class="price-3 reveal">
+        <article class="price-card card">
+          <h3>Core</h3>
+          <p class="price-sub">For individuals, freelancers and micro-businesses getting started.</p>
+          <div class="price-amount"><span class="price-num">$6</span><span class="price-per">/user/mo</span></div>
+          <a class="btn btn-ink" href="#contact">Choose Core</a>
+          <span class="seats"><i class="ph ph-users-three"></i> 1 to 10 seats</span>
+        </article>
+        <article class="price-card card price-featured">
+          <h3>Professional <span class="pill pill-navy">Most picked</span></h3>
+          <p class="price-sub">For growing organisations with broader collaboration needs.</p>
+          <div class="price-amount"><span class="price-num">$12</span><span class="price-per">/user/mo</span></div>
+          <a class="btn btn-primary" href="#contact">Choose Professional</a>
+          <span class="seats"><i class="ph ph-users-three"></i> 25 to 250 seats</span>
+        </article>
+        <article class="price-card card">
+          <h3>Enterprise</h3>
+          <p class="price-sub">For enterprise-scale requirements and volume-based arrangements.</p>
+          <div class="price-amount"><span class="price-num">$11</span><span class="price-per">/user/mo</span></div>
+          <a class="btn btn-ink" href="#contact">Choose Enterprise</a>
+          <span class="seats"><i class="ph ph-users-three"></i> 500 to 5,000 seats, volume pricing</span>
+        </article>
+      </div>
+      <div class="price-help reveal">
+        <p><strong>Need help choosing?</strong> The right plan depends on your team size, collaboration needs, governance requirements and expected use of premium capabilities.</p>
+        <a class="btn btn-outline-navy" href="#contact">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+  <section class="faq" id="faq" style="padding: 72px 0;">
+    <div class="container faq-inner">
+      <div class="faq-head reveal">
+        <h2>Frequently asked questions.</h2>
+        <div class="faq-actions">
+          <button class="faq-x" id="faqExpand" type="button">Expand all</button>
+          <button class="faq-x" id="faqCollapse" type="button">Collapse all</button>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item"><summary><em class="fq-num">01</em><span class="fq-q">Which Katon 360 plan is right for our organisation?</span><i class="ph ph-plus"></i></summary><p>Choose a starting plan based on your number of users, collaboration needs, organisational complexity, governance requirements and expected use of premium capabilities. Larger organisations can speak with the Katon team about their specific requirements.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">02</em><span class="fq-q">Can we scale our plan as our organisation grows?</span><i class="ph ph-plus"></i></summary><p>The plan structure is designed around different team sizes and business needs. Contact the Katon team to discuss seat changes, upgrades and commercial arrangements.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">03</em><span class="fq-q">How can our IT team manage users and access?</span><i class="ph ph-plus"></i></summary><p>Organisations should assess administration, identity management, user roles, permissions and access controls against their internal requirements. The Katon team can discuss the relevant capabilities for your deployment.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">04</em><span class="fq-q">How does Katon 360 approach security and privacy?</span><i class="ph ph-plus"></i></summary><p>Security and privacy are important considerations across the ecosystem. Organisations with specific security, compliance, audit or governance requirements should discuss them with Katon before deployment.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">05</em><span class="fq-q">Can Katon 360 support multilingual teams?</span><i class="ph ph-plus"></i></summary><p>Katon 360's multilingual collaboration approach is designed to support teams working across African and global language contexts. Contact the team for details about supported languages and translation capabilities.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">06</em><span class="fq-q">Can we evaluate Katon 360 before a wider rollout?</span><i class="ph ph-plus"></i></summary><p>Contact the Katon team to discuss a product demonstration or evaluation and understand the product experience, deployment requirements and suitability for your organisation.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">07</em><span class="fq-q">How should we assess the total cost?</span><i class="ph ph-plus"></i></summary><p>Consider user count, required capabilities, storage, AI usage, administration and support requirements. The Katon team can help clarify the proposed plan structure and commercial options.</p></details>
+        <details class="faq-item"><summary><em class="fq-num">08</em><span class="fq-q">How can we discuss enterprise deployment requirements?</span><i class="ph ph-plus"></i></summary><p>Contact the Katon team to discuss organisational needs, deployment requirements, governance considerations and appropriate commercial arrangements.</p></details>
+      </div>
+    </div>
+  </section>
+  <section class="lead" id="contact" style="background: var(--bg-soft); padding: 72px 0;">
+    <div class="container lead-inner">
+      <div class="lead-copy reveal">
+        <h2>Let's build a more connected workplace.</h2>
+        <p>Tell us what your team needs. We'll help you explore Katon 360 and identify the right way forward for your organisation.</p>
+        <ul class="feature-list" style="margin-top: 28px;">
+          <li><i class="ph ph-chats-circle"></i><div><strong>Talk to a specialist.</strong> Walk through your team's needs with the Katon 360 team.</div></li>
+          <li><i class="ph ph-monitor-play"></i><div><strong>See it in action.</strong> Get a product walkthrough for your use case.</div></li>
+          <li><i class="ph ph-buildings"></i><div><strong>Plan your rollout.</strong> From a small pilot to enterprise-scale deployment.</div></li>
+        </ul>
+      </div>
+      <form class="lead-form card reveal" id="leadForm" novalidate>
+        <div class="lf-row"><label>Full name<input type="text" name="name" required placeholder="Amara Okoye"></label><label>Work email<input type="email" name="email" required placeholder="you@company.com"></label></div>
+        <div class="lf-row"><label>Company name<input type="text" name="company" required placeholder="Brightside Studio"></label><label>Job title<input type="text" name="title" placeholder="Operations Lead"></label></div>
+        <div class="lf-row">
+          <label>Number of employees<select name="size"><option>1 to 10</option><option>11 to 50</option><option>51 to 250</option><option>251 to 1,000</option><option>1,000+</option></select></label>
+          <label>Country or region<input type="text" name="region" placeholder="Ghana"></label>
+        </div>
+        <label>Area of interest<select name="interest"><option>Meetings</option><option>Messaging</option><option>Calendar</option><option>Files</option><option>Tasks</option><option>Notes</option><option>AI</option><option>Multilingual Collaboration</option><option>Enterprise Deployment</option></select></label>
+        <label>Tell us about your requirements (optional)<textarea name="req" rows="3" placeholder="What does your team need?"></textarea></label>
+        <span class="field-error" id="leadErr" hidden>Please fill your name, work email and company.</span>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        <div class="lead-success" id="leadSuccess" hidden>
+          <i class="ph ph-check-circle"></i>
+          <h3>Request received.</h3>
+          <p>The Katon 360 team will reach out shortly to plan your rollout.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="container cta-grid reveal">
+      <div class="cta-copy">
+        <h2>Your work is connected. Make your workplace feel that way.</h2>
+        <p>Bring people, conversations and productivity closer together with Katon 360.</p>
+        <div class="cta-btns">
+          <button class="btn btn-primary btn-caps btn-lg" data-open-modal>Start Free</button>
+          <a class="btn btn-dark btn-caps btn-lg" href="#contact">Talk to Our Team</a>
+        </div>
+        <span class="cta-tag">Work smarter. Connect everything. Achieve more.</span>
+      </div>
+      <div class="cta-media">
+        <video class="show-video" src="assets/ui-film.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <img class="brand-mark" src="assets/logo.png" alt="">
+        Katon360
+      </a>
+      <p>Work smarter. Connect everything. Achieve more.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <a href="#communication">Communication Suite</a>
+      <a href="#collaboration">Collaboration Suite</a>
+      <a href="#ai">AI and Productivity</a>
+      <a href="#security">Security</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#pricing">Pricing</a>
+      <a href="#customers">Customer Stories</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#top">Privacy Policy</a>
+      <a href="#top">Terms of Service</a>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <span>© 2026 Katon360. All rights reserved.</span>
+  </div>
+</footer>
+
+
+<dialog id="signupModal" class="modal">
+  <form id="signupForm" method="dialog" novalidate>
+    <button type="button" class="icon-btn modal-close" id="modalClose" aria-label="Close"><i class="ph ph-x"></i></button>
+    <div class="modal-body" id="modalBody">
+      <h3>Start free</h3>
+      <p>No card needed. Your workspace is live in minutes.</p>
+      <label>Work email
+        <input type="email" id="suEmail" placeholder="you@company.com" required>
+        <span class="field-error" id="suEmailErr" hidden>Enter a valid work email.</span>
+      </label>
+      <label>Team name
+        <input type="text" id="suTeam" placeholder="Brightside Studio" required>
+        <span class="field-error" id="suTeamErr" hidden>Give your team a name.</span>
+      </label>
+      <button class="btn btn-primary btn-block" type="submit">Create workspace</button>
+    </div>
+    <div class="modal-success" id="modalSuccess" hidden>
+      <i class="ph ph-check-circle"></i>
+      <h3>Workspace ready</h3>
+      <p>Your workspace tour starts right on this page. Try the live product above.</p>
+      <button class="btn btn-primary" type="button" id="modalDone">Take me there</button>
+    </div>
+  </form>
+</dialog>
+
+<button class="cb-launcher" id="cbLauncher" aria-label="Chat with Katon Assist">
+  <i class="ph ph-chat-circle-dots"></i>
+  <span class="cb-ping"></span>
+</button>
+<div class="chatbot" id="chatbot" hidden>
+  <div class="cb-head">
+    <img src="assets/logo.png" alt="">
+    <div><strong>Katon Assist</strong><span><i class="cb-dot"></i> Online, replies instantly</span></div>
+    <button class="icon-btn cb-close" id="cbClose" aria-label="Close chat"><i class="ph ph-x"></i></button>
+  </div>
+  <div class="cb-feed" id="cbFeed"></div>
+  <div class="cb-quick" id="cbQuick"></div>
+  <form class="cb-form" id="cbForm">
+    <input type="text" id="cbInput" placeholder="Ask about Katon 360..." autocomplete="off">
+    <button class="btn btn-primary btn-sm" type="submit" aria-label="Send"><i class="ph ph-paper-plane-right"></i></button>
+  </form>
+</div>
+
+<div class="pop90" id="pop90" hidden>
+  <div class="pop90-card">
+    <button class="pop90-close" id="pop90Close" type="button" aria-label="Close"><i class="ph ph-x"></i></button>
+    <div class="pop90-copy">
+      <h3>Not sure where to start?</h3>
+      <p>Get more clarity in a 30-minute call with the Katon 360 team.</p>
+      <a class="btn btn-primary btn-caps" id="pop90Cta" href="#contact">Request a Callback</a>
+    </div>
+    <div class="pop90-art"><img src="assets/katon-bot.png" alt=""></div>
+  </div>
+</div>
+<div class="toast-zone" id="toastZone"></div>
+
+<script src="app.js?v=41"></script>
+</body>
+</html>
